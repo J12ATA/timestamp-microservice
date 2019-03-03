@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
 });
 
 // your first API endpoint... 
-app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
+app.get("/api/hello", (req, res) => {
+  res.json({greeting: 'hello API'});``
 });
 
 app.get('/api/timestamp/:date_string?', (req, res) => {
@@ -40,6 +40,6 @@ app.get('/api/timestamp/:date_string?', (req, res) => {
 });
 
 // listen for requests :)
-const listener = app.listen(process.env.PORT || 3000, function () {
+const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port);
 });
